@@ -8,6 +8,19 @@
 The second argument of this system call is the number of elements in the array.
 	* The third argument is the address of an unsigned integer array. Each element with index i of this array stores the physical address of the virtual address stored as element i in the array pointed by the first argument.
 	* The fourth argument is the number of elements stored in the array pointed by the third argument.
+	
+2. prototype of the new system call is as follows:     
+int my_get_physical_addresses(unsigned int * initial, int len_vir, unsigned int * result, int len_phy)
+
+3. 
+Write a multi-thread program with three threads using the new system call to show how the following memory areas are shared by these threads. Your program must use variables with storage class __thread. The memory areas include code segments, data segments, BSS segments, heap segments, libraries, stack segments, and thread local storages. You need to draw a figure as follows to show your results.
+[Link](https://img.cntofu.com/book/note/linux_system/images/thread-stack.png)
+
+4. Hint : 
+	* Two threads show a physical memory cell (one byte) if both of them have a virtual address that is translated into the physical address of the memory cell.
+	* The kernel usually does not allocate physical memories to store all code and data of a process when the process starts execution. Hence, if you want kernel to allocate physical memories to a piece of code, execute the code first. If you want kernel to allocate physical memories to a variable, access the variable first.
+	* Inside the Linux kernel, you need to use function copy_from_user() and function copy_to_user() to copy data from/to a user address buffer.
+	* Check the "Referenced Material" part of the Course web site to see how to add a new system call in Linux.
 
 ## Q&A
 1. 當程式調用memory allocation的方法，如：malloc、new時，OS會如何處理？
