@@ -13,9 +13,6 @@ int globalVar = 0;
 int bss;
 unsigned long heap_addr;
 
-//void* thread1(void* args);
-//void* thread2(void* args);
-
 int main(){
         int *heap = malloc(sizeof(int));
         *heap = 888;
