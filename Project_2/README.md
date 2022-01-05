@@ -14,7 +14,7 @@ int my_get_physical_addresses(unsigned int * initial, int len_vir, unsigned int 
 
 3. 
 Write a multi-thread program with three threads using the new system call to show how the following memory areas are shared by these threads. Your program must use variables with storage class __thread. The memory areas include code segments, data segments, BSS segments, heap segments, libraries, stack segments, and thread local storages. You need to draw a figure as follows to show your results.
-[Link](https://img.cntofu.com/book/note/linux_system/images/thread-stack.png)
+![](https://img.cntofu.com/book/note/linux_system/images/thread-stack.png)
 
 4. Hint : 
 	* Two threads show a physical memory cell (one byte) if both of them have a virtual address that is translated into the physical address of the memory cell.
