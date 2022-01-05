@@ -1,5 +1,13 @@
 ## Problem
 [Link](https://staff.csie.ncu.edu.tw/hsufh/COURSES/FALL2021/linux_project_2.html)
+### Question 1
+1. Requirement : 
+	* In this project, for both Questions 1 and 2, you need to write a new system call my_get_physical_addresses(unsigned int * initial, int len_vir, unsigned int * result, int len_phy) so that a process can use it to get the physical addresses of some virtual addresses.
+	* The return value of this system call is either 0 or a positive value. 0 means that an error occurs when executing this system call. A positive value means the system call is executed successfully.
+	* The first argument of this system call is the address of an unsigned integer array. Each element of the array stores a virtual address of a process.
+The second argument of this system call is the number of elements in the array.
+	* The third argument is the address of an unsigned integer array. Each element with index i of this array stores the physical address of the virtual address stored as element i in the array pointed by the first argument.
+	* The fourth argument is the number of elements stored in the array pointed by the third argument.
 
 ## Q&A
 1. 當程式調用memory allocation的方法，如：malloc、new時，OS會如何處理？
