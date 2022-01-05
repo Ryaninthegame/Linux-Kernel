@@ -1,7 +1,7 @@
 ## Problem
 [Link](https://staff.csie.ncu.edu.tw/hsufh/COURSES/FALL2021/linux_project_2.html)
 ### Question 1
-1. Requirement : 
+1. Requirement_1 : 
 	* In this project, for both Questions 1 and 2, you need to write a new system call my_get_physical_addresses(unsigned int * initial, int len_vir, unsigned int * result, int len_phy) so that a process can use it to get the physical addresses of some virtual addresses.
 	* The return value of this system call is either 0 or a positive value. 0 means that an error occurs when executing this system call. A positive value means the system call is executed successfully.
 	* The first argument of this system call is the address of an unsigned integer array. Each element of the array stores a virtual address of a process.
@@ -9,10 +9,11 @@ The second argument of this system call is the number of elements in the array.
 	* The third argument is the address of an unsigned integer array. Each element with index i of this array stores the physical address of the virtual address stored as element i in the array pointed by the first argument.
 	* The fourth argument is the number of elements stored in the array pointed by the third argument.
 	
-2. prototype of the new system call is as follows:     
+2. Requirement_2 : 
+/*prototype of the new system call is as follows:*/     
 int my_get_physical_addresses(unsigned int * initial, int len_vir, unsigned int * result, int len_phy)
 
-3. 
+3. Requirement_3 :
 Write a multi-thread program with three threads using the new system call to show how the following memory areas are shared by these threads. Your program must use variables with storage class __thread. The memory areas include code segments, data segments, BSS segments, heap segments, libraries, stack segments, and thread local storages. You need to draw a figure as follows to show your results.
 ![](https://img.cntofu.com/book/note/linux_system/images/thread-stack.png)
 
