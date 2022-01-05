@@ -23,6 +23,13 @@ Write a multi-thread program with three threads using the new system call to sho
 	* Inside the Linux kernel, you need to use function copy_from_user() and function copy_to_user() to copy data from/to a user address buffer.
 	* Check the "Referenced Material" part of the Course web site to see how to add a new system call in Linux.
 
+### Question 2
+* Write a program with the new system call my_get_physical_addresses(unsigned int * initial, int len_vir, unsigned int * result, int len_phy) to check how memory areas are shared by two processes that execute this program simultaneously.
+* Hint:
+	* When making your check, both related processes must be in progress. Hence you may need to use function sleep() to guarantee this requirement.
+	* Inside the Linux kernel, you need to use function copy_from_user() and function copy_to_user() to copy data from/to a user address buffer.
+	* Check the "Referenced Material" part of the Course web site to see how to add a new system call in Linux.
+
 ## Q&A
 1. 當程式調用memory allocation的方法，如：malloc、new時，OS會如何處理？
 答: Process分配memory有兩種方式：分別由brk和mmap完成。brk是將data段的最高地址指針_edata往高地址推，mmap是在process的虛擬地址空間中，找一塊空閒的虛擬空間
