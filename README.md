@@ -84,8 +84,8 @@ $ cd linux-4.15
     core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ mycall/
     
     若是在其他資料夾也有 system call，繼續往後串就可以惹。
-    例如跟 mycall 同一層有另外一個資料夾 project_1 裡有另外一個 system call
-    core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ mycall/ project_1
+    例如跟 mycall 同一層中，有另外一個資料夾 mycall_2 裡有 system call
+    core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ mycall/ mycall_2
     ```
 5. 再來要把我們新增的 system call 加到 system call table 裡
     * 下列指示適用在 64 位元的 OS
