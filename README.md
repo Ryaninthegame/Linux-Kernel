@@ -5,13 +5,13 @@ National Central University Linux Operating System Project
 Ryan Wang, Cheng-Kai Wang, Yung-Peng Hsu
 
 ## Linux Kernel 編譯
-- Linux 版本：ubuntu 18.04
-- Kernel 版本：Kernel 4.15
+* Linux 版本：ubuntu 18.04
+* Kernel 版本：Kernel 4.15
 
 ### 前置作業
 * [安裝VMware](https://blog.xuite.net/yh96301/blog/341981056-VMware+Workstation+16+Player%E5%AE%89%E8%A3%9DUbuntu+20.04%3E)
 * [安裝VMware tools](https://www.youtube.com/watch?v=fSOvnlEowLA)
-    * 安裝這個才能讓 VMware 變成全螢幕，某則螢幕太小。
+    * 安裝這個才能讓 VMware 變成全螢幕，否則螢幕太小。
 * [下載Linux Kernel](http://ftp.ntu.edu.tw/linux/kernel/v4.x/?fbclid=IwAR0fq2e0T60YB54O2xZGouyQ33z4o_kxkmElhdn-y9CqIZnq2bc2lwVIdwk)
     * 下載「linux-4.15.tar.gz」(Ctrl+F搜尋比較快)
     * 解壓縮
