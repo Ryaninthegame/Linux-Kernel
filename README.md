@@ -93,7 +93,7 @@ $ cd linux-4.15
     * 第三個為檔名，第四個為 「sys_」+「function 名稱」 (參照第二步的 code)
     ```
     $ vim arch/x86/entry/syscalls/syscall_64.tbl
-    333   64  helloworld  sys_pass_kernel_data
+    334   64  helloworld  sys_pass_kernel_data
     ```
 6. 接著編譯kernel前要裝一些套件
     ```
