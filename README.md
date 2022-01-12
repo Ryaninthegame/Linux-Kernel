@@ -2,10 +2,7 @@
 National Central University Linux Operating System Project
 
 ## Contributor
-Cheng-Kai Wang, Ryan Wang, Yung-Peng Hsu
-
-
-
+Ryan Wang, Cheng-Kai Wang, Yung-Peng Hsu
 
 ## Linux Kernel 編譯
 Linux 版本：ubuntu 18.04
