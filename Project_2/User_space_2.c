@@ -8,36 +8,40 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 int globalVar = 0;
 int bss;
 unsigned long heap_addr;
 
 int main(){
-        int *heap = malloc(sizeof(int));
-        *heap = 888;
-        heap_addr = (unsigned long)heap;
-        printf("=========main==============\n");
-        int n = 0;
-        unsigned long result = 0;
-        printf("==========virtual address===========\n");
-        printf("code: 0x%-16lx, data: 0x%-16lx, bss: 0x%-16lx, heap: 0x%-16lx\n", (unsigned long)main, (unsigned long)&globalVar, (unsigned long)&bss, (unsigned long)heap_addr);
-        printf("share_lib: 0x%-16lx, stack: 0x%-16lx\n", (unsigned long)printf, (unsigned long)&n);
-        printf("=========physical address===========\n");
-        int a = syscall(334, (unsigned long)main, &result);
-        printf("code: 0x%-16lx, ", result);
-	a = syscall(334, (unsigned long)&globalVar, &result);
-        printf("data: 0x%-16lx, ", result);
-        a = syscall(334, (unsigned long)&bss, &result);
-        printf("bss: 0x%-16lx, ", result);
-        a = syscall(334, (unsigned long)&heap_addr, &result);
-        printf("heap: 0x%-16lx\n", result);
-        a = syscall(334, (unsigned long)printf, &result);
-        printf("share_lib: 0x%-16lx, ", result);
-        a = syscall(334, (unsigned long)&n, &result);
-        printf("stack: 0x%-16lx\n", result);
+    int *heap = malloc(sizeof(int));
+    *heap = 888;
+    heap_addr = (unsigned long)heap;
+    int n = 0;
+    unsigned long result = 0;
+    printf("=========main==============\n");
+    printf("==========virtual address===========\n");
+    printf("stack    : 0x%-16lx\n", (unsigned long)&n);
+    printf("heap     : 0x%-16lx\n", (unsigned long)heap_addr);
+    printf("bss      : 0x%-16lx\n", (unsigned long)&bss);
+    printf("data     : 0x%-16lx\n", (unsigned long)&globalVar);
+    printf("share_lib: 0x%-16lx\n", (unsigned long)printf);
+    printf("code     : 0x%-16lx\n", (unsigned long)main);
+    
+    printf("=========physical address===========\n");
+    int a = syscall(333, (unsigned long)&n, &result);
+    printf("stack    : 0x%-16lx\n", result);
+    a = syscall(333, (unsigned long)heap_addr, &result);
+    printf("heap     : 0x%-16lx\n", result);
+    a = syscall(333, (unsigned long)&bss, &result);
+    printf("bss      : 0x%-16lx\n", result);
+    a = syscall(333, (unsigned long)&globalVar, &result);
+    printf("data     : 0x%-16lx\n", result);
+    a = syscall(333, (unsigned long)printf, &result);
+    printf("share_lib: 0x%-16lx\n", result);
+    a = syscall(333, (unsigned long)main, &result);
+    printf("code     : 0x%-16lx\n", result);
 
-        char s;
-	scanf("%c", &s);
-        return 0;
+    char s;
+    scanf("%c", &s);
+    return 0;
 }
