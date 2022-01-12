@@ -11,8 +11,10 @@ struct data_segment{
 
 int main(){
     struct data_segment my_data_segment;
-    int a = syscall(333, getpid(), (void*)&my_data_segment);
-    printf("Start: %lx\nEnd: %lx\n", my_data_segment.start_code, my_data_segment.end_code);
+
+    int a = syscall(334, getpid(), (void*)&my_data_segment);
+
+    printf("Start: %lx\nEnd  : %lx\n", my_data_segment.start_code, my_data_segment.end_code);
 
     return 0;
 }
