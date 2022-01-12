@@ -46,7 +46,7 @@ $ cd linux-4.15
         unsigned long end_code;
     };
 
-    SYSCALL_DEFINE2(sys_helloworld, pid_t, user_pid, void* __user, user_address){
+    SYSCALL_DEFINE2(pass_kernel_data, pid_t, user_pid, void* __user, user_address){
         struct data_segment my_data_segment;
         struct task_struct *task;
 
@@ -93,7 +93,7 @@ $ cd linux-4.15
     * 第三個為檔名，第四個為 「sys_」+「function 名稱」 (參照第二步的 code)
     ```
     $ vim arch/x86/entry/syscalls/syscall_64.tbl
-    333   64  helloworld  sys_helloworld
+    333   64  helloworld  sys_pass_kernel_data
     ```
 6. 接著編譯kernel前要裝一些套件
     ```
