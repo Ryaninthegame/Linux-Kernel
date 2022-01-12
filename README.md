@@ -66,13 +66,13 @@ $ cd linux-4.15
         return 1;
     }
     ```
-3. 在同一層內，修改 Makefile
+3. 在同一層內(mycall)，修改 Makefile
     ```
     $ vim Makefile
     加入下列程式
     obj-y := helloworld.o
     ```
-4. 回到上層目錄，修改 Makefile
+4. 回到上層目錄(linux-4.15)，修改 Makefile
     * 這是為了告訴它，我們新的system call的source files在mycall資料夾裡
     ```
     $ cd ..
