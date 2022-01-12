@@ -5,8 +5,8 @@ National Central University Linux Operating System Project
 Ryan Wang, Cheng-Kai Wang, Yung-Peng Hsu
 
 ## Linux Kernel 編譯
-Linux 版本：ubuntu 18.04
-Kernel 版本：Kernel 4.15
+- Linux 版本：ubuntu 18.04
+- Kernel 版本：Kernel 4.15
 
 ### 前置作業
 * [安裝VMware](https://blog.xuite.net/yh96301/blog/341981056-VMware+Workstation+16+Player%E5%AE%89%E8%A3%9DUbuntu+20.04%3E)
