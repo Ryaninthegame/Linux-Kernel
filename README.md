@@ -89,7 +89,7 @@ $ cd linux-4.15
     ```
 5. 再來要把我們新增的 system call 加到 system call table 裡
     * 下列指示適用在 64 位元的 OS
-    * 在 64 位元最後新增一行，原本 system call 只到 332 號，所以這邊就填 333 號
+    * 在 64 位元最後新增一行，原本 system call 只到 333 號，所以這邊就填 334 號
     * 第三個為檔名，第四個為 「sys_」+「function 名稱」 (參照第二步的 code)
     ```
     $ vim arch/x86/entry/syscalls/syscall_64.tbl
