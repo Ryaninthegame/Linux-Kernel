@@ -1,4 +1,3 @@
-###### tags: `Linux Kernel`
 # Project_3
 [Problem](https://staff.csie.ncu.edu.tw/hsufh/COURSES/FALL2021/linux_project_3.html)
 ## Question 1
